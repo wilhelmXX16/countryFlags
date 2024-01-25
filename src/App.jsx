@@ -1,9 +1,7 @@
 import { useState ,useEffect } from 'react'
 import './App.css'
-import Card from "./components/Card"
 // import flag from './json/data.json'
 import axios from 'axios'
-import FormCountry from './components/FormCountry'
 import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import CountryFlag from './pages/CountryFlag'
@@ -44,13 +42,11 @@ function App() {
           <Route path='/countryFlag' element={ <CountryFlag />}/>
         </Route>
       </Routes>
-      
-      {/* <FormCountry/>
-      <div className='cardCountry'>
+      {/* <div className='cardCountry'>
         {
           flags?.map(flag => (
             <Card 
-              key={flag.name.official}
+              key={flag.name.official
               flag={flag}
             />
           ))
