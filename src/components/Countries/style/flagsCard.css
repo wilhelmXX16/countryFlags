@@ -1,0 +1,42 @@
+:root {
+    --elements__dark__Blue: hsl(209, 23%, 22%);
+    --background__very__dark: hsl(207, 26%, 17%);
+    --text__light__mode: hsl(200, 15%, 8%);
+    --input__light__mode :hsl(0, 0%, 52%);
+    --background__light__mode: hsl(0, 0%, 96%);
+    --text_dark_elements_light: hsl(0, 0%, 100%);
+  }
+.country{
+    width: 100%;
+    max-width: 350px;
+    border-radius: 0.8em;
+    overflow: hidden;
+}
+.country__body{
+    background-color: var(--text_dark_elements_light);
+    color: var(--text__light__mode);
+    padding: 1em;
+    padding-top: 20px;
+}
+.country__name{
+    text-align: left;
+    text-transform: capitalize;
+    padding-bottom: 0.5em;
+}
+.country__info{
+    text-align: left;
+    padding: 0.3em;
+}
+.country__data{
+    color: var(--input__light__mode);
+}
+
+
+.country__container{
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 3em;
+}

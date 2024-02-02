@@ -1,16 +1,30 @@
 import React from 'react';
+import { useEffect } from 'react';
+import useFetch from '../../hooks/UseFetch';
+import FlagCard from './FlagCard';
 
-const Card = () => {
 
+
+const Card = ({formUrl}) => {
+
+  //const url = 'https://restcountries.com/v3.1/all'
+  const [countries, getAllCountries] = useFetch(formUrl)
+
+  useEffect(() => {
+    getAllCountries()
+  }, [formUrl])
   
+  // console.log(countries)
 
   return (
-    <div className='country'>
-      {/* <img className='flag' src={flag.flags.png} alt="flag" />
-      <h3 className='name'>{flag.name.common}</h3>
-      <p className='description'>Population:<span>{flag.population}</span></p>
-      <p className='description'>Region:<span>{flag.region}</span></p>
-      <p className='description'>CApital:<span>{flag.capital}</span></p> */}
+    <div className='country__container'>
+      {
+        countries?.map(country => (
+            <FlagCard 
+                key={country.name.common}
+                flag={country}/>
+        ))
+      }
     </div>
   )
 }

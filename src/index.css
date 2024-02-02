@@ -1,42 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@;300;600;800;900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
-body {
+:root {
+  --elements__dark__Blue: hsl(209, 23%, 22%);
+  --background__very__dark: hsl(207, 26%, 17%);
+  --text__light__mode: hsl(200, 15%, 8%);
+  --input__light__mode :hsl(0, 0%, 52%);
+  --background__light__mode: hsl(0, 0%, 98%);
+  --text_dark_elements_light: hsl(0, 0%, 100%);
+}
+
+/* ----- reset ------ */
+
+* {
+  box-sizing: border-box;
+}
+html{
+  font-family: 'Nunito Sans', sans-serif;
+}
+body{
   margin: 0;
-  padding: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  max-width: 1440px;
-  min-height: 100vh;
-  background-color: rgb(233, 232, 231)
+  background-color: var(--background__light__mode);
+}
+h1,h2,h3,h4,p,ul{
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
-.head{
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  background-color: aliceblue;
-  border-radius: 5px;
-  box-shadow: 3px 4px 2px rgba(208, 206, 206, 0.869);
+ul{
+  list-style: none;
+  padding-left: 0;
 }
-.titleHead{
-  background-color: aqua;
-  text-align: start;
-  padding: 0 4rem ;
+input{
+  outline: none;
+  font-family: inherit;
 }
-.container-btn-mode{
-  background-color: blue;
+button{
+  font-family: inherit;
 }
-.cardCountry{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 3rem;
+select{
+  font-family: inherit;
 }
-
-.country{
-  background-color: aliceblue;
-}
-.flag{
-  height: 100%;
+img{
   width: 100%;
 }
+
